@@ -5,8 +5,15 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  // Your code goes here...
+  let catArray = [];
 
+  for (let i of arr1) {
+    catArray.push(i);
+  }
+  for (let i of arr2) {
+    catArray.push(i);
+  }
+  return catArray;
 }
 
 

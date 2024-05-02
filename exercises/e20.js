@@ -6,9 +6,31 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  // Your code goes here...
+  let aNames = [];
+  let dumbNames = [];
+  let segregated = [];
+  
 
+  for (let i = 0; i < array.length; i++) {
+    let truth = false;
+
+    for (let char of array[i]) {
+      if (char.toLowerCase() === 'a') {
+        truth = true;
+        break;
+      }
+    }
+    if (truth) {
+      aNames.push(array[i]);
+    } else {dumbNames.push(array[i]);}
+  }
+  segregated.push(aNames, dumbNames);
+  return segregated;
 }
+
+
+
+
 
 
 // === TEST YOURSELF ===
