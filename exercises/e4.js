@@ -4,12 +4,25 @@
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
 export function findMinValueInArray(array) {
-  return Math.min(...array);
+ 
+  let lowBall = 100;
+  for (let i of array) {
+    if (i < lowBall) {
+      lowBall = i;
+    }
+  }
+  return lowBall;
 }
 
 export function findMaxValueInArray(array) {
-  return Math.max(...array)
-}
+  let bigMoney = 0;
+  for (let i of array) {
+    if (i > bigMoney) {
+      bigMoney = i;
+    }
+  }
+  return bigMoney;
+} 
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
